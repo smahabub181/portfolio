@@ -50,7 +50,7 @@ const profile = {
   },
   assets: {
     cvPdfUrl: "", // Leave empty to route "Download CV" to the CV tab
-    avatarUrl: "/avatar.jpg" // Ensure 'avatar.jpg' is placed in your project's 'public/' folder
+    avatarUrl: `${import.meta.env.BASE_URL}avatar.jpg`
   },
   integrations: {
     metricsEndpoint: "" 
