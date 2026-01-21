@@ -1,20 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  // IMPORTANT: your UI toggles the "dark" class on <html>
-  // so Tailwind must use "class" mode (not the default "media")
+  // IMPORTANT: for your Sun/Moon toggle (class-based dark mode)
   darkMode: "class",
 
-  content: [
-    "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  // Scan these files for Tailwind classes
+  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
 
   theme: {
-    extend: {},
+    extend: {
+      // You can extend theme here later if needed
+    },
   },
 
   plugins: [
-    require("tailwindcss-animate"),
     require("@tailwindcss/line-clamp"),
+    require("tailwindcss-animate"),
   ],
 };
